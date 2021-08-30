@@ -6,6 +6,8 @@ ApplicationWindow{
     width: 640
     height: 512
     title: "Ingresar"
+
+    property QtObject backend
     
 
     StackView{

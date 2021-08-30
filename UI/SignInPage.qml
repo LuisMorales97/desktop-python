@@ -29,11 +29,13 @@ Component{
             Layout.bottomMargin : 128
         }
         
-        CustomTextField{ 
+        CustomTextField{
+            id: email_field
             placeholderText:  "Email"
         }
 
-        CustomTextField{ 
+        CustomTextField{
+            id: passcode_field
             placeholderText:  "Password"
             echoMode: TextField.Password
         }
@@ -51,6 +53,7 @@ Component{
                 horizontalAlignment: Text.AlignHCenter
             }
             onClicked: {
+                backend.authenticate(email_field.text, passcode_field.text)
                 stack.push(welcPage)
             }
         }

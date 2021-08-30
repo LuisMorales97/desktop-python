@@ -16,6 +16,7 @@ Component{
         Text {
             anchors.centerIn: parent
             property string username1: "DXMOE"
+            property QtObject backend
             text: username1 + " has ingresado."
             font.pixelSize: 16
             color: "white"
