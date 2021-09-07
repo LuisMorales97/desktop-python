@@ -1,2 +1,2 @@
 # desktop-python
-Programa de Escritorio realizado con Python
+Programa de Escritorio realizado con QML + Python
