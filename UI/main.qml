@@ -8,7 +8,8 @@ ApplicationWindow{
     title: "Ingresar"
 
     property QtObject backend
-    
+    property string username: ""
+
 
     StackView{
         id: stack
@@ -18,5 +19,13 @@ ApplicationWindow{
 
     WelcomePage{
         id: welcPage;
+    }
+
+    Connections {
+        target: backend
+        function onAuthenticated(user) {
+            username = user
+            stack.currentItem.connector()
+        }
     }
 }
